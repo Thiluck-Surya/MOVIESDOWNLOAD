@@ -11,12 +11,13 @@
 
 <body>
 
-<!-- ===== HEADER +MENU===== -->
+<!-- ===== HEADER ===== -->
 <header class="topbar">
   <div class="menu-btn" onclick="toggleMenu(event)">☰</div>
   <div class="site-title">Z-Hub</div>
 </header>
 
+<!-- ===== MENU ===== -->
 <nav id="menu" class="menu">
   <a href="index.html" class="active">Home</a>
   <a href="movies.html">Movies</a>
@@ -31,12 +32,11 @@
       type="text"
       id="searchInput"
       placeholder="Search by name, type, year…"
-      onkeyup="filterItems(event)"
+      onkeyup="filterItems()"
     >
-    <button onclick="triggerSearch()">Search</button>
+    <button onclick="filterItems()">Search</button>
   </div>
 
-  <!-- NO RESULTS MESSAGE -->
   <div id="noResults" class="no-results">
     No results found
   </div>
@@ -47,7 +47,6 @@
 
   <h2>Recently Added</h2>
 
-  <!-- ===== 16:9 MEDIA LIST ===== -->
   <div class="media-list">
 
     <!-- MOVIE -->
