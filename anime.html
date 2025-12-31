@@ -11,19 +11,34 @@
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- ===== HEADER + MENU ===== -->
 <header class="topbar">
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="menu-btn" onclick="toggleMenu(event)">☰</div>
   <div class="site-title">Z-Hub</div>
 </header>
 
-<!-- ===== MENU ===== -->
 <nav id="menu" class="menu">
   <a href="index.html">Home</a>
   <a href="movies.html">Movies</a>
   <a href="anime.html" class="active">Anime</a>
   <a href="webseries.html">Web Series</a>
 </nav>
+
+<div class="content">
+  <div class="search-wrap">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search anime by name, year, language…"
+      onkeyup="filterItems()"
+    >
+    <button onclick="filterItems()">Search</button>
+  </div>
+
+  <div id="noResults" class="no-results">
+    No results found
+  </div>
+</div>
 
 <!-- ===== SEARCH (ANIME ONLY) ===== -->
 <div class="content">
