@@ -13,7 +13,7 @@
 
 <!-- ===== HEADER ===== -->
 <header class="topbar">
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="menu-btn" onclick="toggleMenu(event)">☰</div>
   <div class="site-title">Z-Hub</div>
 </header>
 
@@ -25,16 +25,16 @@
   <a href="webseries.html" class="active">Web Series</a>
 </nav>
 
-<!-- ===== SEARCH (WEB SERIES ONLY) ===== -->
+<!-- ===== SEARCH BAR ===== -->
 <div class="content">
   <div class="search-wrap">
     <input
       type="text"
       id="searchInput"
       placeholder="Search web series by name, year, language…"
-      onkeyup="filterItems(event)"
+      onkeyup="filterItems()"
     >
-    <button onclick="triggerSearch()">Search</button>
+    <button onclick="filterItems()">Search</button>
   </div>
 
   <div id="noResults" class="no-results">
