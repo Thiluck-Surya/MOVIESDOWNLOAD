@@ -3,7 +3,9 @@
    ====================================== */
 
 /* ===== MENU TOGGLE ===== */
-function toggleMenu() {
+function toggleMenu(e) {
+  e.stopPropagation(); // prevent instant close
+
   const menu = document.getElementById("menu");
   if (!menu) return;
 
@@ -40,7 +42,6 @@ function filterItems() {
     const lang  = (item.dataset.lang || "").toLowerCase();
     const year  = (item.dataset.year || "").toLowerCase();
 
-    /* match against any field */
     if (
       title.includes(input) ||
       type.includes(input)  ||
