@@ -45,20 +45,26 @@ html, body{
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-
 /* ==================================================
-   MENU
+   MENU (FIXED – WORKING)
 ================================================== */
-.menu{
+#menu{
   display:none;
+  position:fixed;
+  top:60px;
+  right:10px;
+  width:200px;
   background:#141414;
+  border-radius:12px;
+  overflow:hidden;
+  z-index:1000;
 }
 
-.menu.show{
+#menu.show{
   display:block;
 }
 
-.menu a{
+#menu a{
   display:block;
   padding:14px 16px;
   color:#e0e0e0;
@@ -67,15 +73,14 @@ html, body{
   border-bottom:1px solid #1f1f1f;
 }
 
-.menu a:hover{
+#menu a:hover{
   background:#1f1f1f;
 }
 
-.menu a.active{
+#menu a.active{
   background:#1f1f1f;
   color:#ffffff;
 }
-
 /* ==================================================
    CONTENT
 ================================================== */
